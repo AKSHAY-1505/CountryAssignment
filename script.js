@@ -55,13 +55,12 @@ function createCountryContainer(png, official, capital, languages) {
   countryToBeAdded.classList.add("country-item");
 
   countryToBeAdded.innerHTML = `
-            <div class="contain-img">
-              <img src=${png} alt="" />
+            
+            <img class="countryimg" src=${png} alt="" />
+            <div class="details">
+            <h1 id="countryName">${official}</h1>
+            <h3>Capital: ${capital}</h3>
             </div>
-        
-            <h1>${official}</h1>
-            <h3>${capital}</h3>
-        
             <h3> Language : ${languages[Object.keys(languages)[0]]} </h3>
       `;
 
@@ -90,7 +89,7 @@ function displayWarning() {
   const warning = document.createElement("div");
   warning.innerHTML = `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Error!</strong> Task Name cannot be empty.
+            <strong>Error!</strong> Postal Code cannot be empty.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         `;
@@ -103,7 +102,7 @@ document.forms["searchCountryForm"].addEventListener("submit", (e) => {
 
   let postalCode = document.getElementById("postalCode").value;
 
-  taskName === "" ? displayWarning() : addCountries(postalCode);
+  postalCode === "" ? displayWarning() : addCountries(postalCode);
 
   document.querySelector("#postalCode").value = "";
 });

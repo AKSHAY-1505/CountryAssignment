@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <!-- FONT -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
@@ -18,7 +23,7 @@
   </head>
   <body>
     <div class="mainContainer">
-      <h1><i class="bi bi-card-checklist"></i> To-Do List</h1>
+      <h1 class="heading"><i class="bi bi-globe-americas"></i> Search For Countries.</h1>
       <div id="warningContainer"></div>
       <div class="formContainer">
         <form id="searchCountryForm">
@@ -29,7 +34,7 @@
         </form>
       </div>
 
-      <h3>Countries</h3>
+      <h2 class="heading">Countries</h2>
       <div id="countryList"></div>
     </div>
     <script src="script.js"></script>
